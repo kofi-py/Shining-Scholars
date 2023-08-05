@@ -1,0 +1,184 @@
+.slogan {
+  width: 100%;
+  padding: 150px 0 90px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  position: relative;
+}
+
+.slogan .slogan__title {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.slogan .slogan__title > h2 {
+  font-size: 50px;
+  width: 550px;
+  margin-top: 2rem;
+
+  text-align: center;
+  font-family: "Fredoka One", cursive;
+  font-weight: 400;
+}
+
+.slogan .slogan__title > img {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+
+  opacity: 0.2;
+}
+
+.slogan__item {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5rem;
+}
+
+.slogan__item__box {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 3rem;
+}
+
+.slogan__item__box__icon {
+  width: 180px;
+  height: 180px;
+
+  border-radius: 10rem;
+  border: none;
+  font-size: 60px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: linear 0.3s;
+}
+
+.slogan__item__box__icon > i {
+  transition: linear 0.3s;
+}
+
+#dove {
+  background-color: #ffded5;
+}
+
+#dove > i {
+  color: #ff5528;
+}
+
+#dove:hover {
+  background-color: #ff5528;
+  color: #ffded5;
+}
+
+#dove:hover i {
+  color: #ffded5;
+}
+
+#pray {
+  background-color: #ffefd7;
+}
+
+#pray > i {
+  color: #ffa415;
+}
+
+#pray:hover {
+  background-color: #ffa415;
+}
+
+#pray:hover i {
+  color: #ffefd7;
+}
+
+#earth {
+  background-color: #d6f1f7;
+}
+
+#earth > i {
+  color: #2bb1ce;
+}
+
+#earth:hover {
+  background-color: #2bb1ce;
+}
+
+#earth:hover i {
+  color: #d6f1f7;
+}
+
+#hand-holding {
+  background-color: #cef9e8;
+}
+
+#hand-holding > i {
+  color: #26cc8c;
+}
+
+#hand-holding:hover {
+  background-color: #26cc8c;
+}
+
+#hand-holding:hover i {
+  color: #cef9e8;
+}
+
+.slogan__item__box__icon > i {
+  color: #fff;
+}
+
+.slogan__item__box__title {
+  margin-top: 1rem;
+}
+
+.slogan__item__box__content > p {
+  font-size: 18px;
+  width: 180px;
+  line-height: 35px;
+  margin-top: 1rem;
+  color: black;
+
+  text-align: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  .slogan__item {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3rem;
+    row-gap: 0rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .slogan__item {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 0;
+  }
+
+  .slogan .slogan__title > h2 {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .slogan .slogan__title > h2 {
+    width: 100%;
+  }
+}

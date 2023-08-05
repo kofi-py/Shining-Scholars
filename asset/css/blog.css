@@ -1,0 +1,250 @@
+.blog-ctn {
+  width: 100%;
+  height: fit-content;
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.blog-ctn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 50%;
+  background: rgb(242, 240, 236);
+  z-index: -1;
+}
+
+.blog-title {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  padding-top: 10rem;
+}
+
+.blog-title p {
+  font-weight: 100;
+  font-size: 16px;
+  color: #888;
+}
+
+.blog-title h2 {
+  line-height: 60px;
+  font-size: 50px;
+
+  font-weight: 400;
+  font-family: "Fredoka One", cursive;
+}
+
+.blog-content {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.blog-content .blog-content-box {
+  display: flex;
+  flex-direction: column;
+
+  width: 360px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+
+  background-color: #fff;
+
+  position: relative;
+  z-index: 1000;
+
+  transition: 0.3s ease-out;
+}
+
+.blog-content .blog-content-box:hover {
+  box-shadow: 4px 8px 16px 4px rgba(0, 0, 0, 0.2);
+}
+
+.blog-content .blog-content-box:nth-child(2) .content-img-header {
+  background-image: url(../../asset/img/blog-1-2.jpg);
+}
+.blog-content .blog-content-box:nth-child(3) .content-img-header {
+  background-image: url(../../asset/img/blog-1-3.jpg);
+}
+
+.blog-content .blog-content-box .content-img-header {
+  background-image: url(../../asset/img/blog-1-1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+
+  position: relative;
+  transition: ease-out 400ms;
+
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  z-index: 0;
+
+  cursor: pointer;
+}
+
+.blog-content .blog-content-box .content-img-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000;
+
+  opacity: 0;
+  transition: 0.6s ease-out;
+  z-index: 1;
+
+  height: 50%;
+}
+
+.blog-content .blog-content-box:hover .content-img-header::before {
+  height: 100%;
+  opacity: 0.4;
+}
+
+.blog-content .blog-content-box .content-img-header::after {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  font-size: 40px;
+  color: #fff;
+  transform: translate(-50%, -50%);
+
+  z-index: 2;
+  opacity: 0;
+
+  transition: 0.6s ease-out;
+  height: 100%;
+}
+
+.blog-content .blog-content-box:hover .content-img-header::after {
+  opacity: 0.4;
+  height: 10%;
+}
+
+.blog-content .blog-content-box .content-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  padding: 0 2rem;
+}
+
+.blog-content-box .content-body .content-status {
+  display: flex;
+  gap: 1rem;
+}
+
+.content-status > span {
+  font-size: 14px;
+  color: #727272;
+}
+
+.content-status span > i {
+  color: #ffa415;
+}
+
+.blog-content .content-status span i {
+  margin-right: 0.5rem;
+  margin-top: 1rem;
+}
+
+.blog-content .content-body .content-title {
+  width: fit-content;
+}
+
+.content-title h2,
+.content-footer .content-footer-left p,
+.content-footer i {
+  transition: 0.2s linear;
+  cursor: pointer;
+}
+
+.blog-content-box:hover .content-title h2,
+.blog-content-box:hover .content-footer .content-footer-left p,
+.blog-content-box:hover .content-footer i {
+  color: #ff5528;
+}
+
+.blog-content .content-body .content-paragraph p {
+  color: #727272;
+  font-weight: normal;
+}
+
+.blog-content .content-body .content-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-top: 1px solid #ccc;
+  padding: 1rem 0;
+}
+
+.content-footer .content-footer-left p {
+  color: #000;
+  font-weight: 400;
+}
+
+/* tablet */
+@media only screen and (max-width: 1180px) {
+  .blog-content {
+    align-items: center;
+  }
+
+  .blog-content .blog-content-box {
+    width: 285px;
+  }
+
+  .blog-content .content-body .content-title h2 {
+    font-size: 20px;
+  }
+
+  .blog-content .blog-content-box .content-body {
+    gap: 2rem;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .blog-content {
+    flex-direction: column;
+  }
+
+  .blog-content .blog-content-box {
+    width: 80%;
+  }
+
+  .blog-content .blog-content-box .content-img-header {
+    height: 500px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .blog-content .blog-content-box .content-img-header {
+    height: 300px;
+  }
+
+  .blog-title h2 {
+    font-size: 45px;
+  }
+}
+
+@media only screen and (max-width: 345px) {
+  .blog-title h2 {
+    font-size: 35px;
+  }
+}

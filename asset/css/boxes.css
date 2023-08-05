@@ -1,0 +1,140 @@
+.boxes {
+    padding-bottom: 5rem;
+}
+
+.boxes .boxes-ctn {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.boxes-ctn .boxes-content::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(../../asset/img/healthy_food.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.25;
+    border-radius: 8px;
+    z-index: -1;
+}
+
+.boxes-ctn .boxes-content:nth-child(2)::after {
+    background-image: url(../../asset/img/ahhjpg);
+}
+
+.boxes-ctn .boxes-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 60px 60px 49px;
+    background-color: #343434;
+    border-radius: 8px;
+    position: relative;
+    z-index: 2;
+    width: 590px;
+}
+
+.boxes-content .icon-ctn {
+    transition: all 500ms linear;
+    transform: scale(1) rotateY(-360deg);
+    transition-delay: 0.1s;
+}
+
+.boxes-content:hover .icon-ctn {
+    transform: scale(1.2);
+}
+
+.boxes-content:nth-child(2) .icon-ctn i {
+    color: #26cc8c;
+}
+
+.boxes-content .icon-ctn i {
+    font-size: 64px;
+    color: #ffa415;
+}
+
+.boxes-content .paragraph-ctn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.paragraph-ctn h2 {
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 400;
+    font-family: "Fredoka One", cursive;
+    color: #fff;
+}
+
+.paragraph-ctn p {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 34px;
+}
+
+.paragraph-ctn button {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    background-color: #ff5528;
+    border: none;
+    border-radius: 100vh;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+
+.paragraph-ctn button i {
+    font-size: 30px;
+}
+
+.paragraph-ctn button:hover {
+    background-color: #fff;
+    color: #ff5528;
+}
+
+@media only screen and (max-width: 1220px) {
+    .boxes-ctn .boxes-content {
+        width: 500px;
+    }
+}
+
+
+/* @media only screen and (max-width: 1024px) {
+  .boxes .boxes-ctn {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .boxes-ctn .boxes-content {
+    width: 80%;
+  }
+} */
+
+@media only screen and (max-width: 1024px) {
+    .boxes .boxes-ctn {
+        flex-direction: column;
+        align-items: center;
+    }
+    .boxes-ctn .boxes-content {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .boxes-ctn .boxes-content {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,267 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  height: 120px;
+  padding: 0 80px;
+  background-color: #fff;
+
+  position: sticky;
+  top: 0;
+
+  z-index: 999;
+}
+
+.header__menu {
+  width: 40%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+}
+
+.header__menu .header__menu__dropdown > a {
+  font-size: 16px;
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 100% 0;
+}
+
+.header__menu__dropdown {
+  display: inline-block;
+  height: 100%;
+  padding: 50px 0;
+  position: relative;
+
+  border-top: 2px solid transparent;
+
+  transition: ease-in 0.2s;
+}
+
+.header__menu__dropdown::after {
+  content: "";
+  width: 0;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+
+  background-color: #ff5528;
+  z-index: 1;
+  height: 2px;
+
+  display: block;
+  transition: 0.25s;
+}
+
+.header__menu__dropdown:hover::after {
+  width: 100%;
+}
+
+.header__menu__dropdown .dropdown-content {
+  position: absolute;
+  top: calc(100%);
+  min-width: 200px;
+
+  transition: ease 500ms;
+
+  display: none;
+
+  background-color: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+}
+
+.header__menu__dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dropdown-content a {
+  text-decoration: none;
+  font-weight: 300;
+  color: black;
+
+  padding: 12px 16px;
+}
+
+.header__menu__dropdown a:hover {
+  color: #ff5528;
+}
+
+.header__menu__dropdown--active {
+  border-top: 2px solid #ff5528 !important;
+  padding: 50px 0;
+}
+
+.header__menu--active {
+  color: #ff5528 !important;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.header__icon {
+  border-left: solid 2px #ccc;
+}
+
+.header__icon > a > i {
+  margin-left: 1rem;
+  color: #888;
+  font-size: 20px;
+}
+
+.header__icon > a > i:hover {
+  color: #ff5528;
+  transition: linear 0.5s;
+}
+
+.icon-in-section {
+  display: none;
+}
+
+.responsive-icon {
+  display: none;
+}
+
+.responsive-cancle {
+  display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  .responsive-cancle i {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  .icon-in-section {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .icon-in-section i {
+    font-size: 20px;
+    color: #fff;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: all 0.3s linear;
+  }
+
+  .icon-in-section i:hover {
+    color: #ff5528;
+  }
+
+  .header .header__menu {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    background: #222;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0;
+    transition: all 0.3s ease;
+  }
+  .header .header__menu.active {
+    left: 0%;
+  }
+
+  .header__menu__dropdown {
+    height: 0;
+  }
+
+  .header__menu__dropdown--active {
+    padding: 0;
+    margin-top: 6rem;
+  }
+
+  .header__menu .header__menu__dropdown > a {
+    justify-content: center;
+    color: #fff;
+    font-size: 20px;
+    padding: 0;
+  }
+
+  .header__menu .header__menu__dropdown--active a {
+    font-size: 20px;
+  }
+
+  .header__menu .header__menu__dropdown--active a {
+    padding: 0;
+  }
+
+  .header__menu__dropdown .dropdown-content {
+    left: 220px;
+    top: 0;
+    background-color: #222;
+  }
+
+  .header__menu__dropdown .dropdown-content > a {
+    color: #fff;
+  }
+
+  .header__menu__dropdown a:hover {
+    color: #ff5528;
+  }
+
+  .header__menu__dropdown::after {
+    content: none;
+  }
+
+  .header__menu__dropdown--active {
+    border-top: none !important;
+  }
+
+  .header__menu .responsive-cancle i {
+    font-size: 32px;
+  }
+
+  .header__icon {
+    display: none;
+  }
+
+  .responsive-icon {
+    display: inline-block;
+  }
+
+  .responsive-cancle {
+    display: inline-block;
+  }
+
+  .responsive-icon i {
+    font-size: 24px;
+    color: #ff5528;
+    cursor: pointer;
+  }
+
+  .responsive-icon.hide {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    padding: 0px 40px;
+  }
+}
+
+@media only screen and (max-width: 578px) {
+  .header__menu__dropdown:hover .dropdown-content {
+    top: 100%;
+    left: 0;
+  }
+
+  .header .header__menu {
+    max-width: 100%;
+  }
+}
