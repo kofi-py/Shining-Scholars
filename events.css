@@ -1,0 +1,41 @@
+/* Basic styles for the navbar */
+
+* {
+  font-family: "DM Sans", sans-serif;
+}
+
+nav {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Styles for event cards */
+.event-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.event-card h3 {
+  margin-top: 0;
+}
+
+/* Add more CSS styles to make your site look cool */

@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap");
+
+:root {
+  --primary-color: #333;
+  --secondary-color: #f2f2f2;
+}
+
+* {
+  font-family: "DM Sans", sans-serif;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--primary-color);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Fredoka", cursive;
+  color: var(--primary-color);
+}
+
+section {
+  padding: 40px 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+section {
+  transition: transform 0.3s ease-out;
+  box-shadow: 0.3s;
+}
+
+section:hover {
+  transform: scale(1.01);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+#title {
+  text-align: center;
+}
+#section.beginning {
+  justify-content: left;
+  align-items: left;
+}
+#section.needs {
+  justify-content: right;
+  align-items: right;
+  text-align: right;
+}
+#section.plan {
+  justify-content: left;
+  align-items: left;
+}
+#mission {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
