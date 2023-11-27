@@ -6,14 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Problems With The School</title>
     <link rel="stylesheet" href="boiler-plate.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="asset/css/normalize.css">
 </head>
 
 <body>
-    <header>
+    <header data-aos="zoom-in">
         <h1>Problems with The School</h1>
     </header>
     <main>
-        <section class="comparison">
+        <section class="comparison" data-aos="zoom-in-up">
             <div class="title">Keyboard Problem</div>
             <div class="left-column">
                 <h2>Current Situation</h2>
@@ -31,7 +33,7 @@
                 <img src="asset/img/comparison-1.png" width="840" height="761">
             </div>
         </section>
-        <section class="comparison">
+        <section class="comparison" data-aos="zoom-in-down">
             <div class="title">No SMARTBoard</div>
             <div class="left-column">
                 <h2>Current Situation</h2>
@@ -47,8 +49,8 @@
                 <img src="asset/img/comparison-2.png" width="840" height="761">
             </div>
         </section>
-        <section class="comparison">
-            <div class="title">No Library</div>
+        <section class="comparison" data-aos="zoom-in-up">
+            <div class="title">Poor Furniture</div>
             <div class="left-column">
                 <h2>Current Situation</h2>
                 <p>In this school, the desks are only meant to fit two people; however, the students have to sit in
@@ -68,7 +70,7 @@
                 <img src="asset/img/comparison-3.png" width="840" height="761">
             </div>
         </section>
-        <section class="comparison">
+        <section class="comparison" data-aos="zoom-in-down">
             <div class="title">No Library</div>
             <div class="left-column">
                 <h2>Current Situation</h2>
@@ -84,7 +86,7 @@
                 <img src="asset/img/comparison-4.png" width="840" height="761">
             </div>
         </section>
-        <section class="comparison">
+        <section class="comparison" data-aos="zoom-in-up">
             <div class="title">Housing for Teachers</div>
             <div class="left-column">
                 <h2>Current Situation</h2>
@@ -101,13 +103,64 @@
                 <h2>Ideal Scenario</h2>
                 <p>By contrast, a school in the United States is in an area close to where all the teachers live.</p>
                 </p>
-                <img src="asset/img/comparison-5.png" width="840" height="761">
+                <img src="asset/img/comparison-5.jpg" width="840" height="761">
+            </div>
+        </section>
+        <section class="comparison" data-aos="zoom-in-down">
+            <div class="title">Outdoor Maintenance</div>
+            <div class="left-column">
+                <h2>Current Situation</h2>
+                <p>The kids really like to play soccer (a.k.a football as they call it). The only problem, though, is
+                    that they can't cut the grass down; they don't have a lawnmower. Due to this, the grass in the field
+                    gets so high, that the students aren't able to play sports. Not being able to go outdoors hinders
+                    students' socialization with others. </p>
+                <img src="asset/img/outdoors.png" alt="">
+
+            </div>
+            <div class="right-column">
+                <h2>Ideal Scenario</h2>
+                <p>By contrast, an ideal school has a playground or any type of area where students can socialize, hence
+                    improving their socialization skills and allowing them to enjoy themselves and have fun.</p>
+                </p>
+                <img src="asset/img/comparison-6.jpg" width="840" height="761">
+            </div>
+        </section>
+        <section class="comparison" data-aos="zoom-in-up">
+            <div class="title">Transportation</div>
+            <div class="left-column">
+                <h2>Current Situation</h2>
+                <p>The school does not have any mode of Transportation to pick up students or drop them off. Thus, the
+                    students have to walk many miles in a jungle-like environment to get to the school.</p>
+                <img src="asset/img/transport.png" alt="">
+
+            </div>
+            <div class="right-column">
+                <h2>Ideal Scenario</h2>
+                <p>By contrast, an ideal school has buses to pick up and drop off students at certain stops.</p>
+                </p>
+                <img src="asset/img/comparison-7.jpg" width="840" height="761">
+            </div>
+        </section>
+        <section class="comparison" data-aos="zoom-in-down">
+            <div class="title">Clothing</div>
+            <div class="left-column">
+                <h2>Current Situation</h2>
+                <p>The students have very little to no clothes to wear for school, and their uniforms are worn out.</p>
+                <img src="asset/img/clothing.png" alt="">
+
+            </div>
+            <div class="right-column">
+                <h2>Ideal Scenario</h2>
+                <p>By contrast, an ideal school has uniforms for the students to wear.</p>
+                </p>
+                <img src="asset/img/comparison-8.jpg" width="840" height="761">
             </div>
         </section>
 
-        <section class="conclusion">
+
+        <section class="conclusion" data-aos="zoom-out">
             <h2>Donate Today!</h2>
-            <p>If you would like to help the school improve their technology, please donate today! Your support helps us
+            <p>If you would like to help the school improve, please donate today! Your support helps us
                 fulfill our mission! Thank you, and God bless you for your genorosity!</p>
             </p>
 
@@ -120,6 +173,10 @@
             <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
         </section>
     </main>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
