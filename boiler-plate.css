@@ -23,22 +23,43 @@ main {
   margin-top: 50px;
 }
 
+/* Comparison Section Styles */
+
 .comparison {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .left-column,
 .right-column {
-  width: 45%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 30px;
+  width: calc(50% - 10px);
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  transition: transform 0.3s ease;
+}
+
+.left-column:hover,
+.right-column:hover {
+  transform: translateY(-5px);
 }
 
 .left-column h2,
 .right-column h2 {
   text-align: center;
+  margin-top: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.left-column p,
+.right-column p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
 }
 
 .left-column img,
@@ -46,6 +67,9 @@ main {
   max-width: 100%;
   height: auto;
   display: block;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .title {
