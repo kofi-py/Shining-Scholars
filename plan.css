@@ -29,7 +29,12 @@ h2 {
 }
 
 .link-underline {
-  text-decoration: underline;
+  text-decoration: none;
+}
+.link-underline:hover {
+  color: #0011ff;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
 .btn-primary {
