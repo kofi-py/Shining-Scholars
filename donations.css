@@ -1,107 +1,68 @@
-/* about.css */
-
-/* Reset some default styles for better control */
-body,
-h1,
-h2,
-p {
-  margin: 0;
-  padding: 0;
+:root {
+  --font-family: "Inter", sans-serif;
+  --bg-color: #f8f9fa;
+  --secondary-color: #6c757d;
+  --text-color: #ffffff;
+  --border-color: #ccc;
+  --input-padding: 10px;
+  --input-margin-bottom: 20px;
+  --button-padding: 10px 20px;
+  --button-font-size: 18px;
+  --button-border-radius: 4px;
+  --button-margin-top: 20px;
 }
 
-h1,
-h2 {
-  font-family: "Poppins", sans-serif;
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
 }
 
-p {
-  font-family: "Roboto", sans-serif;
-}
-
-/* Header styles */
 header {
-  background-color: #f2f2f2;
   padding: 20px;
+  color: var(--text-color);
 }
 
-/* Navigation styles */
-nav {
-  background-color: #f2f2f2;
-  padding: 10px;
-}
-
-ul {
-  list-style-type: none;
+header h2 {
   margin: 0;
-  padding: 0;
+  font-family: "Rubik", sans-serif;
+  color: var(--secondary-color);
 }
 
-li {
-  display: inline;
-  margin-right: 10px;
-  font-family: "Inter", sans-serif;
+.about {
+  font-family: "Rubik", sans-serif;
 }
 
-a {
-  text-decoration: none;
-  color: #333;
-  padding: 5px 10px;
+.about h2 {
+  font-weight: bold;
 }
 
-a:hover {
-  background-color: #333;
-  color: #fff;
-  transition: 0.3s;
+.container,
+form {
+  max-width: 100%;
 }
 
-/* Main content styles */
-main {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+@media (max-width: 767px) {
+  .form-group label,
+  .form-group input {
+    font-size: 14px;
+  }
+
+  .form-group {
+    margin-bottom: 10px;
+  }
 }
 
-section {
-  margin-bottom: 40px;
-}
-
-h1 {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-
-h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-p {
-  line-height: 1.5;
-}
-
-img {
-  padding-bottom: 24px;
-}
-
-button#donate-button {
-  background-color: #4caf50;
-  color: white;
-  padding: 10px 20px;
+button[type="submit"] {
+  background-color: var(--primary-color);
+  color: var(--text-color);
   border: none;
-  border-radius: 4px;
+  padding: var(--button-padding);
   cursor: pointer;
-  align-self: center;
-  font-family: "Inter", sans-serif;
-  font-size: 48px;
+  font-size: var(--button-font-size);
+  border-radius: var(--button-border-radius);
+  margin-top: var(--button-margin-top);
 }
 
-button#donate-button:hover {
-  background-color: #45a049;
-  transition: 0.3s;
-}
-
-footer {
-  background-color: #f2f2f2;
-  padding: 20px;
-  text-align: center;
+button:hover {
+  background-color: #0056b3;
 }
