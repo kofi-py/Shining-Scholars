@@ -17,6 +17,16 @@ body {
   background-color: #007bff;
 }
 
+/* Custom styling for list icons */
+.fa-ul {
+  list-style-type: none;
+}
+
+.fa-li {
+  margin-right: 0.5em; /* Adjust spacing between icon and text */
+  color: #007bff; /* Change icon color */
+}
+
 .navbar .navbar-brand {
   color: #fff;
 }
